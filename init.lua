@@ -1,5 +1,6 @@
 require("core.options")
 require("core.keymaps")
+require("core.snippet")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -14,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.colortheme"),
+	require("plugins.comment"),
 	require("plugins.autopair"),
 
 	require("plugins.bufferline"),
